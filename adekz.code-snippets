@@ -1,0 +1,70 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+    "Abre tag PHP com igual": {
+        "scope": "php,html",
+        "prefix": "php=",
+        "body": [
+            "<?=$1;?>",
+        ],
+        "description": "Abre tag PHP"
+    },
+    "Abre tag PHP": {
+        "scope": "php,html",
+        "prefix": "php",
+        "body": [
+            "<?\n\t$1\n?>",
+        ],
+        "description": "Abre tag PHP"
+    },
+    "Master SEO": {
+        "scope": "php,html",
+        "prefix": "master-seo",
+        "body": [
+            "<!--MASTER:master$1--> ",
+            "<!--VERSAO: 1.0-->",
+            "<? /***SEO_BEGIN**/\n",
+            "global \\$_SEO;",
+            "\\$_SEO['PARAM']=\"\";",
+            "\\$_SEO['TITLE']=\"{BD}\";",
+            "\\$_SEO['DESCRIPTION']=\"{BD}\";",
+            "\\$_SEO['KEYWORDS']=\"{BD}\";",
+            "SEO_do($_GET[':name']);",
+            "/***SEO_END**/?>"
+        ],
+        "description": "Abre Master SEO"
+    },
+    "Load OBJ": {
+        "scope": "php,html",
+        "prefix": "load-obj",
+        "body": [
+            "$BLOCK_COMMENT_START DOC $BLOCK_COMMENT_END",
+            "<?=loadObj('obj_$1');?>"
+        ],
+        "description": "Cria um loadObj"
+    },
+    "DAO com WHERE": {
+        "scope": "php,html",
+        "prefix": "dao-where",
+        "body": [
+            "\\$$1=DAO::$2();",
+            "\\$$1->where(\"$3\");",
+            "\\$$1->loadAll();"
+        ]
+    },
+}
