@@ -65,6 +65,35 @@
             "\\$$1=DAO::$2();",
             "\\$$1->where(\"$3\");",
             "\\$$1->loadAll();"
-        ]
+        ],
+        "description": "Cria um DAO"
     },
+    "Abre Ajax": {
+        "scope": "php,html",
+        "prefix": "dao-where",
+        "body": [
+            "\\$$1=DAO::$2();",
+            "\\$$1->where(\"$3\");",
+            "\\$$1->loadAll();"
+        ],
+        "description": "Abre AJAX"
+    },
+    "Ajax para VUE.JS": {
+        "prefix": "ajax-vue",
+        "body": [
+            "$.ajax({",
+            "  url: 'ajax-fn?function=${1}',",
+            "  dataType: 'php, html'",
+            "  method: 'POST',",
+            "  data:{",
+            "    ${2}",
+            "  }, ",
+            "  success: function(data){ ",
+            "  ${3}",
+            "  }.bind(this), ",
+            "  async:false ",
+            "});"
+        ],
+        "description": "Ajax para VUE.JS"
+    }
 }
